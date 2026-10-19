@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polígono con geolocalización</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Mi polígono</h1>
+    <div class="controles">
+      <button id="btnUbicar">Mi ubicación</button>
+      <button id="btnCerrar" disabled>Cerrar polígono</button>
+      <button id="btnDeshacer" disabled>Deshacer punto</button>
+      <button id="btnLimpiar">Limpiar</button>
+      <button id="btnExportar" disabled>Exportar GeoJSON</button>
+      <!-- Reto 4 -->
+      <button id="btnAgregarUbicacion">Agregar mi ubicación como vértice</button>
+      <!-- Reto 8 -->
+      <button id="btnGeocerca" disabled>Iniciar geocerca</button>
+    </div>
+    <div class="controles opciones">
+      <!-- Reto 3 -->
+      <label>Nombre
+        <input type="text" id="inputNombre" placeholder="Mi polígono" maxlength="60">
+      </label>
+      <!-- Reto 2 -->
+      <label>Color
+        <input type="color" id="inputColor" value="#27ae60">
+      </label>
+      <!-- Reto 6-->
+      <label>Importar GeoJSON
+        <input type="file" id="inputArchivo" accept=".geojson,.json,application/geo+json,application/json">
+      </label>
+    </div>
+    <p id="info">Haz clic en el mapa para agregar vértices.</p>
+  </header>
+
+  <main class="contenido">
+    <div id="mapa"></div>
+    <!-- Reto 1 tabla de coordenadas  -->
+    <aside class="panel">
+      <h2>Vértices</h2>
+      <table id="tablaVertices">
+        <thead>
+          <tr><th>#</th><th>Latitud</th><th>Longitud</th></tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
+      <p id="tablaVacia">Aún no hay vértices.</p>
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

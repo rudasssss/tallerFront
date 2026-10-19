@@ -1,0 +1,22 @@
+{
+  "type": "Feature",
+  "properties": {
+    "nombre": "EJEMPLO - polígono de prueba en Manizales (no es una medición real)",
+    "descripcion": "Archivo de ejemplo para probar el reto 6 (Importar GeoJSON). El entregable real es poligono.geojson exportado desde la app.",
+    "ejemplo": true,
+    "stroke": "#8e44ad",
+    "fill": "#8e44ad"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [-75.5179, 5.0685],
+        [-75.5171, 5.0685],
+        [-75.5171, 5.0692],
+        [-75.5179, 5.0692],
+        [-75.5179, 5.0685]
+      ]
+    ]
+  }
+}
